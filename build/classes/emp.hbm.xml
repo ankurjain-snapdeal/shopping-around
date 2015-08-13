@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+   <class name="com.snap.entity.Emp" table="employee" dynamic-insert="true" dynamic-update="true">
+   		<id name="empId" column="id" type="int">
+   			<generator class="assigned"/>
+   		</id>
+   		<property name="empName" column="name" length="25" not-null="true"/>
+   		<property name="empSal" column="salary" type="double"/>
+   		<property name="doj" column="doj" type="date"/>
+   		<property name="dept" column="dept" length="20" />
+   </class>
+</hibernate-mapping>
+
+
+
+
